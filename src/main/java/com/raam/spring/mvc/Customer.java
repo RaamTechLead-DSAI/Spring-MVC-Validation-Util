@@ -14,6 +14,9 @@ public class Customer {
     @Pattern(regexp = "\\d{10}", message = "Must be a valid 10-digit UK number")
     private String phoneNumber;
 
+    @Pattern(regexp = "^(?i)[A-Z]{1,2}\\d[A-Z\\d]? ?\\d[A-Z]{2}$", message = "Enter valid UK postcode")
+    private String postCode;
+
     public String getFirstName() {
         return firstName;
     }
@@ -36,5 +39,13 @@ public class Customer {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getPostCode() {
+        return postCode;
+    }
+
+    public void setPostCode(String postCode) {
+        this.postCode = postCode;
     }
 }
