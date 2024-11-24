@@ -1,7 +1,14 @@
 package com.raam.spring.mvc;
 
-public class Customers {
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+public class Customer {
+    @NotNull(message="is required")
+    @Size(min=2,message="is required")
     private String firstName;
+    @NotNull(message="is required")
+    @Size(min=2,message="is required")
     private String lastName;
 
     public String getFirstName() {
