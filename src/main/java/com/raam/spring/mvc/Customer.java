@@ -10,7 +10,7 @@ public class Customer {
     @Size(min=2,message="is required")
     private String lastName;
 
-    @Size(min = 10, max = 10, message = "Must be a valid UK number without preceding 0")
+    //@Size(min = 10, max = 10, message = "Must be a valid UK number without preceding 0")
     @Pattern(regexp = "\\d{10}", message = "Must be a valid 10-digit UK number")
     private String phoneNumber;
 
