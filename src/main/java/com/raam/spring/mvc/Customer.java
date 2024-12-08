@@ -17,6 +17,10 @@ public class Customer {
     @Pattern(regexp = "^(?i)[A-Z]{1,2}\\d[A-Z\\d]? ?\\d[A-Z]{2}$", message = "Enter valid UK postcode")
     private String postCode;
 
+    @NotNull(message = "Date of Birth cannot be null")
+    @Pattern(regexp = "^\\d{2}/\\d{2}/\\d{4}$", message = "Enter Date of Birth in the format dd/MM/yyyy")
+    private String dateOfBirth;
+
     public String getFirstName() {
         return firstName;
     }
@@ -48,4 +52,13 @@ public class Customer {
     public void setPostCode(String postCode) {
         this.postCode = postCode;
     }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
 }
